@@ -95,6 +95,16 @@ li {
   padding-top: 16px;
 }
 
+.button-blue:hover  {
+  opacity: .6;
+}
+
+@media (max-width: 768px) {
+.button-blue:hover  {
+  transform: scale(1.1,1.1);
+}
+}
+
 @media (min-width: 768px) {
   .button-blue {
     width: 349px;
@@ -114,19 +124,19 @@ li {
 
 @media (min-width: 768px) {
   .header {
-    padding: 20px 0 20px 0;
+    padding: 10px 0  10px 0;
   }
 }
 
 .header-logo {
   padding-left: 20px;
-  
+  padding-top: 10px;
 }
 
 @media (min-width: 768px) {
   .header-logo {
-
-    
+    padding-right: 80px;
+    padding-left: 0;
   }
 }
 
@@ -158,6 +168,10 @@ li {
   font-size: 18px;
 }
 
+.button-white:hover  {
+  opacity: .6;
+}
+
 @media (min-width: 768px) {
   .button-white {
     width: 282px;
@@ -182,6 +196,7 @@ li {
   background-color: #005BAC;
   transition: all 0.6s;
   visibility: hidden;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
@@ -213,12 +228,20 @@ li {
     flex-direction: row;
     font-size: 20px;
     gap:60px;
+    padding: 0 40px 0 0;
   }
 }
 
 .hamburger-menu-list li {
   padding: 6px 0 8px 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #6A86EB;
+}
+
+@media (min-width: 768px) {
+  .hamburger-menu-list li {
+    padding: 0;
+    border-bottom: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -244,19 +267,36 @@ li {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .cover {
+    
+  }
+}
+
+.cover-item{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .cover-item {
+    left: 15%;
+  }
+}
+
 .cover-item-top{
   display: flex;
-  position: absolute;
   text-align: center;
-  left: 7%;
-  bottom: 75%;
   line-height: 1.5;
+  
 }
 
 @media (min-width: 768px) {
   .cover-item-top {
-    left: 15%;
-    bottom: 65%;
+    padding-bottom: 20px;;
+    
   }
 }
 
@@ -305,16 +345,12 @@ li {
 
 .cover-item-bottom{
   position: absolute;
-  left: 7%;
-  bottom: 46%;
   line-height: 1.5;
 }
 
 @media (min-width: 768px) {
   .cover-item-bottom{
-    left: 15%;
-    bottom: 20%;
-    line-height: 1.5;
+    
   }
 }
 
@@ -351,7 +387,7 @@ li {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 0;
+    margin-top: -45px;
   }
 }
 
@@ -365,6 +401,11 @@ li {
   background-color: #77CB33;
   font-size: 16px;
   margin-bottom: 12px;
+}
+
+.cover-item-button-green:hover {
+  opacity: .6;
+  transition: .5s;
 }
 
 @media (min-width: 768px) {
@@ -388,6 +429,11 @@ li {
   margin-bottom: 12px;
 }
 
+.cover-item-button-orange:hover  {
+  opacity: .6;
+  transition: .5s;
+}
+
 @media (min-width: 768px) {
   .cover-item-button-orange {
     width: 340px;
@@ -406,6 +452,11 @@ li {
   font-weight: 700;
   background-color: #3AC8AD;
   font-size: 16px;
+}
+
+.cover-item-button-blue:hover  {
+  opacity: .6;
+  transition: .5s;
 }
 
 @media (min-width: 768px) {
@@ -620,6 +671,11 @@ li {
 
 .course-tab-content-item-img {
   width: 95%;
+  transition:all 0.6s;
+}
+
+.course-tab-content-item-img:hover {
+  transform: scale(1.2);
 }
 
 @media (min-width: 768px) {
@@ -697,7 +753,8 @@ li {
 /* 問い合わせ
 ------------------------------------------ */
 .inquiry{
-  font-size: 0;
+  
+  
 }
 
 @media (min-width: 768px) {
@@ -706,3 +763,75 @@ li {
   }
 }
 
+.inquiry-qa{
+  position: relative;
+  transition:all 0.6s;
+}
+
+.inquiry-qa:hover  {
+  opacity: .6;
+  transform: scale(1.2);
+}
+
+.inquiry-qa-text{ 
+  position: absolute; 
+  top:40%;
+  left: 5%;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .inquiry-qa-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+}
+
+.inquiry-qa img{
+  vertical-align: bottom;
+}
+
+.inquiry-classrooms{
+  position: relative;
+  transition:all 0.6s;
+}
+
+.inquiry-classrooms:hover  {
+  opacity: .6;
+  transform: scale(1.2);
+}
+
+.inquiry-classrooms-text{ 
+  position: absolute;
+  top:40%;
+  left: 5%;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;                 
+}
+
+@media (min-width: 768px) {
+  .inquiry-classrooms-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+}
+
+.inquiry-classrooms img{
+  vertical-align: bottom;
+}
+
+/* フッター
+------------------------------------------ */
+.footer{
+  background-color: #DDD;
+  font-size: 13px;
+  font-family: Poppins, sans-serif;
+  height: 83px;
+  text-align: center;
+  padding-top: 30px ;
+}
