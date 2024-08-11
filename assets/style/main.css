@@ -121,13 +121,12 @@ li {
   background-color: #FFF;
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
 }
 
 @media (min-width: 1020px) {
   .header {
     padding-bottom:40px;
-    
   }
 }
 
@@ -139,8 +138,11 @@ li {
   height: 100%;
   display: flex;
   align-items: center;
-  
 }
+}
+
+.header-title{
+  display: none;
 }
 
 .header-logo {
@@ -679,31 +681,23 @@ li {
   }
 }
 
-.course-tab-content-item {
+.course-tab-content-item-img-hover {
   display: block;
-  border-radius: 20px;
+  aspect-ratio: 532/329;
   overflow: hidden;
+  border-radius: 20px;
+  
 }
 
 .course-tab-content-item-img {
   width: 100%;
   transition:all 0.6s;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom:0;
-  
 }
 
 .course-tab-content-item-img:hover {
   transform: scale(1.2);
 }
 
-@media (min-width: 768px) {
-.course-tab-content-item-img {
-  
-}
-}
 
 .tab.st-theme-basic>.tab-content>.tab-pane {
   padding: 0;
