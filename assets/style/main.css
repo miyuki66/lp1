@@ -313,26 +313,15 @@ li {
 .cover .container {
   max-width: 375px;
   margin-inline: auto;
-
   padding-left: 16px;
-
 }
 
 @media (min-width: 768px) {
-
   .cover .container {
     max-width: 1200px;
-
     /* 50px / 1200px = 0.0416666%  最大は50px */
     padding-left: min(4.1666%, 50px);
-
   }
-}
-
-.cover-item {}
-
-@media (min-width: 768px) {
-  .cover-item {}
 }
 
 .cover-item-top {
@@ -900,7 +889,9 @@ li {
 
 /* 問い合わせ
 ------------------------------------------ */
-.inquiry {}
+.inquiry {
+
+}
 
 @media (min-width: 768px) {
   .inquiry {
@@ -909,8 +900,11 @@ li {
 }
 
 .inquiry-qa {
+  position: relative;
   height: calc(170 / 375 * 100vw);
   max-height: 230px;
+  overflow: hidden;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -922,22 +916,38 @@ li {
   }
 }
 
-.inquiry-qa :hover img {
-  transform: scale(1.2);
+.inquiry-qa :after{
+  position: absolute;
+  background: url(/assets/image/pht_qa-1.png);
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.6s all;
+}
 
+@media (min-width: 768px) {
+  .inquiry-qa :after{
+  background: url(/assets/image/pht_qa.png);
+  background-size: 100%;
+}
+}
+
+.inquiry-qa :hover:after {
+transform: scale(1.2);
 }
 
 .inquiry-qa-text {
-  position: relative;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
   width: 100%;
   height: 100%;
-  color: #fff;
-  font-size: 22px;
-  font-weight: 700;
-  overflow: hidden;
-  padding: 0 0 0 5.33%;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -950,23 +960,12 @@ li {
   }
 }
 
-.inquiry-qa img {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  transition: 0.6s all;
-  z-index: -1;
-}
-
 .inquiry-classrooms {
-  height: calc(170 / 375 * 100vw);
+  position: relative;
+  height: calc(170 / 390 * 100vw);
   max-height: 230px;
+  overflow: hidden;
+  background-position: center center;
 }
 
 @media (min-width: 768px) {
@@ -978,12 +977,33 @@ li {
   }
 }
 
-.inquiry-classrooms:hover img {
-  transform: scale(1.2);
+.inquiry-classrooms :after{
+  position: absolute;
+  background: url(/assets/image/pht_classrooms-1.png);
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: 0.6s all;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
+  .inquiry-classrooms :after{
+  background: url(/assets/image/pht_classrooms.png);
+  background-size: 100%;
+}
+}
+
+.inquiry-classrooms :hover:after {
+  transform: scale(1.2);
+  }
+  
+
 .inquiry-classrooms-text {
-  position: relative;
+  position: absolute;
   display: flex;
   align-items: center;
   width: 100%;
@@ -991,9 +1011,6 @@ li {
   color: #fff;
   font-size: 22px;
   font-weight: 700;
-  overflow: hidden;
-  padding: 0 0 0 5.33%;
-  /* 20/375*/
 }
 
 @media (min-width: 768px) {
@@ -1004,20 +1021,6 @@ li {
     padding: 0;
     font-size: 32px;
   }
-}
-
-.inquiry-classrooms img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  transition: 0.6s all;
-  z-index: -1;
-  object-fit: cover;
 }
 
 /* フッター
