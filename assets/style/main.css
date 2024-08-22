@@ -423,7 +423,7 @@ li {
   align-items: center;
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 768px) {
   .cover-item-button {
     max-width: 1180px;
     margin-inline: auto;
@@ -578,7 +578,6 @@ li {
 @media (min-width: 768px) {
   .reason-item-image {
     width: 48%;
-    height: 346px;
   }
 }
 
@@ -661,7 +660,6 @@ li {
     left: 4px;
   }
 }
-
 
 .cource {
   padding: 40px 0 60px 0;
@@ -778,7 +776,6 @@ li {
 
 .course-tab-content-item-img {
   width: 100%;
-  height: 220px;
   transition: all 0.6s;
 }
 
@@ -1094,14 +1091,15 @@ transform: scale(1.2);
   background-color: #DDD;
   font-size: 16.3px;
   font-family: Poppins, sans-serif;
+  text-align: center;
   height: 83px;
   padding-top: 26px;
-  padding-left: 31px;
+  padding-left: 4%;
 }
 
 @media (min-width: 768px) {
   .footer  {
     padding-top: 41px;
-    padding-left: 799px;
+    padding-left: 0;
   }
 }
